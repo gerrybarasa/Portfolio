@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerry Barasa | Full-Stack Developer & Digital Strategist</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons (for professional contact icons) -->
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/css/icons.css">
+    
+    <style>
+        /* Custom font and scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d111c; /* Deep slate background for professional look */
+        }
+        .section {
+            padding: 7rem 0; /* Increased padding for better separation */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Custom styling for the navbar to ensure it stays on top */
+        #navbar {
+            z-index: 100;
+        }
+        /* Custom scroll indicator for navigation (optional, but adds polish) */
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+        /* Modal backdrop styling */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-100">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-slate-900/95 backdrop-blur-sm text-white p-4 flex justify-between px-8 shadow-2xl">
+        <h1 class="font-extrabold text-2xl text-blue-400">Gerry Barasa</h1>
+        <div class="flex gap-6 md:gap-8 text-lg font-medium">
+            <a href="#home" class="nav-link hover:text-blue-400 transition duration-300">Home</a>
+            <a href="#skills" class="nav-link hover:text-blue-400 transition duration-300">Skills</a>
+            <a href="#about" class="nav-link hover:text-blue-400 transition duration-300">About</a>
+            <a href="#projects" class="nav-link hover:text-blue-400 transition duration-300">Projects</a>
+            <a href="#clientfeedback" class="nav-link hover:text-blue-400 transition duration-300">ClientFeedback</a>
+            <a href="#pricing" class="nav-link hover:text-blue-400 transition duration-300">Pricing</a>
+            <a href="#contact" class="nav-link hover:text-blue-400 transition duration-300">Contact</a>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- 1. Home Section -->
+        <section id="home" class="section bg-slate-950 text-center">
+            <div class="max-w-4xl px-4">
+
+            <div class="relative border-8 border-white rounded-[3rem] overflow-hidden shadow-2xl glow-blue transform rotate-2">
+            <span class="text-blue-600 font-bold tracking-widest uppercase text-xs bg-blue-50 px-3 py-1 rounded-full mb-4 inline-block">Full-Stack Engineer</span>
+                    <h1 class="text-6xl md:text-7xl font-black text-pink-900 mb-6 leading-none">Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-indigo-500">Scalable</span> Digital Growth.</h1>
+                      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Gerry Barasa" class="w-full h-[500px] object-cover bg-slate-200">
+                    </div>
+
+                <!-- Profile Picture Placeholder -->
+                <div class="mb-8 mx-auto w-40 h-40 rounded-full border-4 border-blue-400 overflow-hidden shadow-2xl">
+                    <!-- 
+                        professional photo URL.
+                        <img src="https://photo.jpg" ...>
+                    -->
+                    <img src="gerry.jpg" 
+                         alt="Gerry Barasa Profile Picture" 
+                         class="w-full h-full object-cover">
+                </div>
+                
+                <p class="text-xl text-blue-400 font-semibold mb-3">Hello, I'm</p>
+                <h1 class="text-6xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300 leading-tight">
+                    Gerry Barasa
+                </h1>
+                <p class="mt-6 text-2xl font-light max-w-2xl mx-auto text-slate-300">
+                    Dedicated Computer Programming Student And A Fullstack Developer. I build premium web applications that combine world-class design with high-performance backend architecture.
+                </p>
+                <!-- Professional Download Button -->
+                <a href="gerry'sCV.pdf" download class="mt-10 inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 transition duration-300 px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 text-white text-xl font-bold uppercase tracking-wider transform hover:scale-[1.02]">
+                    <i class="ph-fill ph-download-simple text-2xl"></i>
+                    <span>Download CV</span>
+                </a>
+                <p class="mt-3 text-sm text-slate-500">
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. Skills Section -->
+        <section id="skills" class="section bg-slate-900">
+            <div class="max-w-5xl w-full px-6 text-center">
+                <h2 class="text-5xl font-extrabold text-center mb-16 text-blue-400">Technical Skills & Expertise</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+
+                    <!-- Column 1: Core Programming -->
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl border-t-4 border-red-500">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center gap-3 text-red-400">
+                            <i class="ph-fill ph-code block"></i> Programming
+                        </h3>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Python (Intermediate)</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> JavaScript (ES6+)</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> C#, C/C++ (Fundamentals)</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Event Driven Programming</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Agile Development</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Problem Solving & Algorithms</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Backend & Frontend Developer -->
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl border-t-4 border-cyan-500">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center gap-3 text-cyan-400">
+                            <i class="ph-fill ph-code block"></i> Backend & Frontend Developer
+                        </h3>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Web development</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Server Side Development</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Mobile applications</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Portfolio design</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Client Side Development</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Data & Databases -->
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl border-t-4 border-yellow-500">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center gap-3 text-yellow-400">
+                            <i class="ph-fill ph-database block"></i> Databases & Data
+                        </h3>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> SQL (PostgreSQL, MySQL)</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Relational Database Design</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Data Analysis & Entry</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Microsoft Excel (Advanced)</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 4: Development & Research -->
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl border-t-4 border-purple-500">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center gap-3 text-purple-400">
+                            <i class="ph-fill ph-lightbulb block"></i> Tools & Professionalism
+                        </h3>
+                        <ul class="space-y-2 text-slate-300">
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> HTML5 & Tailwind CSS</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Git & GitHub Version Control</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Academic Research & Writing</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Technical Report Documentation</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+         <!-- 3. About Section -->
+        <section id="about" class="section bg-slate-950">
+            <div class="max-w-6xl w-full px-6">
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="mb-16">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-blue-400">The Journey</h2>
+            <h3 class="text-5xl font-extrabold text-green-900 tracking-tighter uppercase">Career <br>Roadmap</h3>
+        </div>
+
+        <div class="space-y-12">
+            <div class="relative pl-12 border-l-4 border-slate-100 group">
+                <div class="absolute -left-[14px] top-0 w-6 h-6 bg-white border-4 border-blue-600 rounded-full group-hover:scale-125 transition-transform"></div>
+                <div class="flex flex-col md:flex-row md:items-center gap-4 mb-2">
+                    <span class="text-xs font-black px-3 py-1 bg-blue-100 text-blue-600 rounded-full w-fit">2024 - PRESENT</span>
+                    <h4 class="text-2xl font-bold mb-4 flex items-center gap-3 text-red-400">Senior Full-Stack Developer (Freelance)</h4>
+                </div>
+                <p class="text-slate-300 leading-relaxed">
+                    Currently a Student pursuing Computer programming Course at Kibabii University - Kenya, Engineering high-performance ecosystems for SMEs across East Africa. Specializing in **Django/React** architectures and **MySQL** database optimization for fintech and logistics platforms.
+                </p>
+            </div>
+
+            <div class="relative pl-12 border-l-4 border-slate-100 group">
+                <div class="absolute -left-[14px] top-0 w-6 h-6 bg-white border-4 border-indigo-400 rounded-full group-hover:scale-125 transition-transform"></div>
+                <div class="flex flex-col md:flex-row md:items-center gap-4 mb-2">
+                    <span class="text-xs font-black px-3 py-1 bg-indigo-50 text-indigo-500 rounded-full w-fit">2022 - 2023</span>
+                    <h4 class="text-2xl font-bold mb-4 flex items-center gap-3 text-purple-400">Software Architecture Mastery</h4>
+                </div>
+                <p class="text-slate-300 leading-relaxed">
+                    Deep-dived into **System Design** and **Enterprise Patterns**. Built various internal tools using **C#** and **Java**, focusing on scalable backend logic and automated testing pipelines.
+                </p>
+            </div>
+
+            <div class="relative pl-12 border-l-4 border-slate-100 group">
+                <div class="absolute -left-[14px] top-0 w-6 h-6 bg-white border-4 border-slate-300 rounded-full group-hover:scale-125 transition-transform"></div>
+                <div class="flex flex-col md:flex-row md:items-center gap-4 mb-2">
+                    <span class="text-xs font-black px-3 py-1 bg-slate-100 text-slate-500 rounded-full w-fit">THE ORIGIN</span>
+                    <h4 class="text-2xl font-bold mb-4 flex items-center gap-3 text-yellow-400">Foundational Engineering</h4>
+                </div>
+                <p class="text-slate-300 leading-relaxed">
+                    Started the journey in computer Programming, mastering **Python programming language** and memory management. Transitioned into web technologies, building the first responsive Calculator with raw **Python**.
+                </p>
+            </div>
+        </div>
+        
+        <div class="mt-16 p-8 bg-slate-900 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+            <p class="text-white text-xl font-bold">Ready to write the next chapter together?</p>
+            <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-blue-700 transition shadow-lg">Inquire Now</a>
+        </div>
+    </div>
+</section>
+
+        <!-- 4. Projects Section -->
+        <section id="projects" class="section bg-slate-950">
+            <div class="max-w-6xl w-full px-6">
+                <h2 class="text-5xl font-extrabold text-center mb-16 text-blue-400">Selected Projects</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project 1a: SQL System -TRAINEE SERVICES MANAGEMENT SYSTEM-->
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 transition duration-500 transform hover:-translate-y-1">
+                        <i class="ph-fill ph-database text-4xl text-cyan-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">Trainee Services Management System (SQL)</h3>
+                        <img src="Trainee Services Management System.jpg">
+                        <p class="text-slate-300 leading-relaxed">
+                            A robust relational database system implementation, featuring comprehensive CRUD (Create, Read, Update, Delete) functionality, complex joins, efficient views, and structured reporting.
+                        </p>
+                        <div class="mt-6 flex gap-4 text-lg font-medium">
+                            <a href="TraineeServicesManagementSystem.sql" onclick="openProjectModal('Trainee Services Management System (SQL)', '/projects/trainee-sql', 'code')" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-eye"></i> View SQL Project
+                            </a>
+                            <a href="TRAINEESERVICESMANAGEMENTSYSTEM.pdf" download class="text-green-400 hover:text-green-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-download-simple"></i> View pdf
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Python calculator-->
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 transition duration-500 transform hover:-translate-y-1">
+                        <i class="ph-fill ph-database text-4xl text-cyan-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">Python Calculator</h3>
+                        <img src="python Calculator.jpeg">
+                        <p class="text-slate-300 leading-relaxed">
+                            Responsive python calculator
+                      </p>
+                        <div class="mt-6 flex gap-4 text-lg font-medium">
+                            <a href="Python Calculator.py" onclick="openProjectModal('Trainee Services Management System (SQL)', '/projects/trainee-sql', 'code')" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-eye"></i> View python calculator
+                            </a>
+                            <a href="Python Calculator.py" download class="text-green-400 hover:text-green-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-download-simple"></i> View code
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Research Study -->
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 transition duration-500 transform hover:-translate-y-1">
+                        <i class="ph-fill ph-flask-conical text-4xl text-emerald-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">Data consultancies across Africa serving SMEs, & Academic Writing Tasks</h3>
+                        <img src="Academic writings.jpeg">
+                        <p class="text-slate-300 leading-relaxed">
+                            Full academic research paper preparation, including detailed methodology development, rigorous data analysis, clear presentation of findings, and professional writing.
+                            Comprehensive grammar, structure, and formatting corrections for academic documents, ensuring clarity, consistency, and adherence to required standards.
+                            Execution of high-quality English to Swahili and Swahili to English translation assignments, ensuring linguistic accuracy and cultural relevance.
+                        </p>
+                        <div class="mt-6 flex gap-4 text-lg font-medium">
+                            <a href="Research & Academic writing tasks.pdf" onclick="openProjectModal('Puerperal Complications Study', '/files/Puerperal-Study.pdf', 'pdf')" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-eye"></i> View Paper
+                            </a>
+                            <a href="Research & Academic writing tasks.pdf" download class="text-green-400 hover:text-green-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-download-simple"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Excel Data Workbooks -->
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 transition duration-500 transform hover:-translate-y-1">
+                        <i class="ph-fill ph-chart-bar text-4xl text-yellow-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">Advanced Excel Data Workbooks</h3>
+                        <img src="Advaced Excel Data Workbook.jpg">
+                        <p class="text-slate-300 leading-relaxed">
+                            Development of sophisticated spreadsheets incorporating complex formulas, dynamic charts, logical functions, and practical applications like hostel management sheets.
+                        </p>
+                        <div class="mt-6 flex gap-4 text-lg font-medium">
+                            <a href="Spreadsheet.xlsx" onclick="openProjectModal('Advanced Excel Data Workbooks', '/projects/excel-workbooks', 'data')" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-eye"></i> View Sample
+                            </a>
+                            <a href="Spreadsheet.xlsx" download class="text-green-400 hover:text-green-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-download-simple"></i> Download XLSX
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: website -->
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 transition duration-500 transform hover:-translate-y-1">
+                        <i class="ph-fill ph-translate text-4xl text-rose-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">Client website</h3>
+                        <img src="webdesign.jpeg">
+                        <p class="text-slate-300 leading-relaxed">
+                            Client Website using HTML
+                    </p>
+                        <div class="mt-6 flex gap-4 text-lg font-medium">
+                            <a href="https://gerryportfolio.netlify.app/" onclick="openProjectModal('Translation Tasks (English ↔ Swahili)', '/files/Translation-Task.pdf', 'pdf')" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-eye"></i> View potrfolio
+                            </a>
+                            <a href="#" download class="text-green-400 hover:text-green-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-download-simple"></i> Download SME pages
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: MPESA Ecosystem -->
+                    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 transition duration-500 transform hover:-translate-y-1">
+                        <i class="ph-fill ph-file-text text-4xl text-indigo-400 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">MPESA Ecosystem</h3>
+                        <img src="MPESA Ecosystem.jpeg">
+                        <p class="text-slate-300 leading-relaxed">
+                            MPESA Ecosystem
+                       </p>
+                         <div class="mt-6 flex gap-4 text-lg font-medium">
+                            <a href="#" onclick="openProjectModal('Academic Proofreading & Editing', '/files/Proofreading-Sample.pdf', 'pdf')" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-eye"></i> View live demo
+                            </a>
+                            <a href="#" download class="text-green-400 hover:text-green-300 transition-colors flex items-center gap-1">
+                                <i class="ph-fill ph-download-simple"></i> Download codes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- 5. ClientFeedback Section -->
+        <sectioni id="clientfeedback" class="py-1 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-extrabold text-center mb-16 text-blue-400">Client Feedback</h2>
+                    <p class="text-2xl font-bold mb-2 text-pink-400">Trusted Success</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200">
+                        <div class="flex gap-1 text-orange-400 mb-6"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                        <p class="text-slate-600 italic mb-8">"Gerry transformed our manual tracking system into a high-performance ERP. His expertise in Python and MySQL saved us months of labor."</p>
+                        <div class="flex items-center gap-4"><div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600">JD</div><div><h4 class="font-bold">John Doe</h4><p class="text-xs text-slate-400">CEO, Logistics Plus</p></div></div>
+                    </div>
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-xl">
+                        <div class="flex gap-1 text-orange-400 mb-6"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                        <p class="text-slate-600 italic mb-8">"The custom admin dashboard Gerry built with React and Node is incredibly intuitive. Our team productivity skyrocketed."</p>
+                        <div class="flex items-center gap-4"><div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center font-bold text-indigo-600">SA</div><div><h4 class="font-bold">Sarah Amina</h4><p class="text-xs text-slate-400">Marketing Director</p></div></div>
+                    </div>
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200">
+                        <div class="flex gap-1 text-orange-400 mb-6"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                        <p class="text-slate-600 italic mb-8">"A rare find. Gerry understands both technical architecture and business strategy. Highly recommended for complex builds."</p>
+                        <div class="flex items-center gap-4"><div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center font-bold text-pink-600">BK</div><div><h4 class="font-bold">Brian Kamau</h4><p class="text-xs text-slate-400">Founder, TechFin</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Pricing Section -->
+         <section id="pricing" class="section bg-slate-950">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="max-w-2xl mx-auto text-center mb-16">
+                    <h2 class="text-5xl font-extrabold text-center mb-16 text-blue-400">Investment Packages</h2>
+                    <p class="text-2xl font-bold mb-2">Predictable pricing for high-end digital engineering.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="pricing-card p-8 rounded-[2rem] border border-slate-200 flex flex-col transition-all">
+                        <h3 class="font-bold text-lg mb-1">Standard Web</h3>
+                        <div class="text-4xl font-black mb-6">Ksh 50k+</div>
+                        <ul class="space-y-4 mb-10 flex-grow text-sm text-slate-300 leading-relaxed">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 text-blue-600"></i> Responsive 5-Page Site</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 text-blue-600"></i> Basic SEO Optimization</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 text-blue-600"></i> WhatsApp Integration</li>
+                        </ul>
+                        <a href="#contact" class="w-full py-4 bg-pink-600 text-white text-center font-bold rounded-xl shadow-lg hover:shadow-pink-200 transition">Get Started</a>
+                    </div>
+                    <div class="pricing-card p-10 rounded-[2rem] border-4 border-blue-600 bg-white shadow-2xl scale-105 z-10 flex flex-col">
+                        <div class="bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full w-fit mb-6 mx-auto">Most Requested</div>
+                        <h3 class="font-bold text-xl mb-1 text-blue-600">Business Pro</h3>
+                        <div class="text-4xl font-black mb-6 text-slate-900">Ksh 95k+</div>
+                        <ul class="space-y-4 mb-10 flex-grow text-sm text-slate-600">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 text-blue-600"></i> Custom Admin Dashboard</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 text-blue-600"></i> CMS Blog Management</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 text-blue-600"></i> Google Analytics Setup</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 text-blue-600"></i> Lifetime Code Ownership</li>
+                        </ul>
+                        <a href="#contact" class="w-full py-4 bg-blue-600 text-white text-center font-bold rounded-xl shadow-lg hover:shadow-blue-200 transition">Hire Me Now</a>
+                    </div>
+                    <div class="pricing-card p-8 rounded-[2rem] border border-slate-200 flex flex-col">
+                        <h3 class="font-bold text-lg mb-1">Custom Platform</h3>
+                        <div class="text-4xl font-black mb-6">Ksh 180k+</div>
+                        <ul class="space-y-4 mb-10 flex-grow text-sm text-slate-300 leading-relaxed">
+                            <li>MPESA Payment Gateways</li>
+                            <li>Complex User Authentication</li>
+                            <li>Custom Mobile App Dev</li>
+                            <li>SLA Maintenance Support</li>
+                        </ul>
+                        <a href="#contact" class="w-full py-4 border-2 border-slate-900 text-center font-bold rounded-xl hover:bg-slate-900 hover:text-white transition">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="py-24 bg-slate-900 text-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="p-12 rounded-[3rem] border border-slate-800 bg-slate-800/30">
+                    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3"><i data-lucide="file-text" class="text-blue-400"></i> Service Agreement Preview</h2>
+                    <div class="grid md:grid-cols-2 gap-10 text-slate-400 text-sm">
+                        <div>
+                            <h4 class="text-white font-bold mb-2">Technical Delivery</h4>
+                            <p>All projects are delivered with full source code documentation. Standard delivery includes 30 days of hyper-care support for bug fixes.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-2">Payment Structure</h4>
+                            <p>50% upfront to initiate architectural planning. 50% upon successful testing and deployment to production.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+             <!-- 5. Contact Section -->
+        <section id="contact" class="section bg-slate-950 pb-20">
+            <div class="max-w-6xl w-full px-6 text-center">
+                <h2 class="text-5xl font-extrabold mb-8 text-blue-400">Let's Connect</h2>
+                <p class="text-xl text-slate-300 mb-12">
+                    I'm actively available for opportunities. Feel free to reach out directly through any of these channels.
+                </p>
+
+                <!-- Font Awesome CDN -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background: #000;
+                }
+
+                .contact-icons {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+                    margin: 40px 0;
+                }
+
+                .contact-icons a {
+                    font-size: 56px;
+                    color: #fff;
+                    text-decoration: none;
+                    transition: 0.3s ease;
+                }
+
+                .contact-icons a:hover {
+                    transform: scale(1.25);
+                    filter: brightness(1.3);
+                }
+
+                /* Brand Colors */
+                .whatsapp { color: #25D366; }
+                .email { color: #EA4335; }
+                .github { color: #ffffff; }
+                .instagram { color: #E1306C; }
+                .facebook { color: #1877F2; }
+                .linkedin { color: #0A66C2; }
+            </style>
+        </head>
+        <body>
+
+            <div class="contact-icons">
+                <a href="https://wa.me/254768070764" target="_blank" class="whatsapp" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="https://gerrybarasa07@gmail.com" class="email" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+                <a href="https://github.com/GerryBarasa" target="_blank" class="github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://instagram.com/gerry_barasa" target="_blank" class="instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://facebook.com/GerryBarasa" target="_blank" class="facebook" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/gerrybarasa" target="_blank" class="linkedin" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+        </body>
+        </html>
+
+
+        <!-- Footer -->
+   <footer class="py-24 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
+        <div class="w-12 h-12 bg-white text-slate-900 flex items-center justify-center rounded-2xl font-black text-2xl mb-6">G</div>
+        
+        <h4 class="font-black text-2xl mb-2 tracking-tighter uppercase">Gerry Barasa</h4>
+        <p class="text-slate-400 text-sm max-w-md mb-8">Full-Stack Developer providing high-end business software across East Africa and beyond.</p>
+        
+        <div class="flex flex-wrap justify-center gap-8 mb-12">
+            <a href="https://linkedin.com/in/gerrybarasa" target="_blank" class="text-slate-400 hover:text-blue-500 transition-all scale-110" aria-label="LinkedIn">
+                <i data-lucide="linkedin"></i>
+            </a>
+            
+            <a href="https://github.com/GerryBarasa" target="_blank" class="text-slate-400 hover:text-white transition-all scale-110" aria-label="GitHub">
+                <i data-lucide="github"></i>
+            </a>
+            
+            <a href="https://instagram.com/gerry_barasa" target="_blank" class="text-slate-400 hover:text-pink-500 transition-all scale-110" aria-label="Instagram">
+                <i data-lucide="instagram"></i>
+            </a>
+
+            <a href="https://facebook.com/GerryBarasa" target="_blank" class="text-slate-400 hover:text-blue-600 transition-all scale-110" aria-label="Facebook">
+                <i data-lucide="facebook"></i>
+            </a>
+
+            <a href="https://wa.me/254768070764" target="_blank" class="text-slate-400 hover:text-green-500 transition-all scale-110" aria-label="WhatsApp">
+                <i data-lucide="message-circle"></i> 
+            </a>
+
+            <a href="https://gerrybarasa07@gmail.com" class="text-slate-400 hover:text-yellow-500 transition-all scale-110" aria-label="Email">
+                <i data-lucide="mail"></i>
+            </a>
+        </div>
+
+         <p class="text-[10px] text-slate-300 font-bold uppercase tracking-widest leading-loose">
+                +254768070764 | gerrybarasa07@gmail.com <br>
+                © 2026 Engineered by Gerry Barasa
+            </p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+    <!-- Project View Modal -->
+    <div id="projectViewModal" class="modal-backdrop">
+        <div class="bg-slate-800 w-full max-w-4xl max-h-[90vh] rounded-xl shadow-2xl p-6 relative flex flex-col">
+            <h3 id="modalTitle" class="text-2xl font-bold mb-4 text-blue-400 border-b border-slate-700 pb-2"></h3>
+            
+            <!-- Content Area (for iframe or message) -->
+            <div id="modalContent" class="flex-grow overflow-y-auto text-slate-300 p-2 space-y-4">
+                <!-- Content will be injected here by JavaScript -->
+                <p class="flex items-center gap-2 font-semibold text-lg text-yellow-400">
+                    <i class="ph-fill ph-warning-circle"></i> Viewing Note for Recruiters:
+                </p>
+                <p>
+                    Since this is a file-based project, the best way to view the complete content (SQL code, Excel sheets, etc.) is via the **Download** link.
+                </p>
+                <div id="pdfViewerContainer" class="hidden w-full h-[500px] border border-slate-700 rounded-lg overflow-hidden">
+                    <iframe id="pdfViewer" class="w-full h-full" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="mt-4 pt-4 border-t border-slate-700 flex justify-end gap-3">
+                <a id="modalDownloadLink" download class="bg-green-600 hover:bg-green-700 transition duration-300 px-4 py-2 rounded-lg text-white font-medium flex items-center gap-2">
+                    <i class="ph-fill ph-download-simple"></i> Download File
+                </a>
+                <button onclick="closeProjectModal()" class="bg-slate-600 hover:bg-slate-700 transition duration-300 px-4 py-2 rounded-lg text-white font-medium">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+
+    <!-- JavaScript for smooth scrolling, active links, and modal logic -->
+    <script>
+        // Custom styling for contact cards
+        document.querySelectorAll('.contact-card').forEach(card => {
+            // Apply necessary Tailwind classes for look and responsiveness
+            card.classList.add('flex', 'flex-col', 'items-center', 'justify-center', 'p-6', 'bg-slate-800', 'rounded-xl', 'shadow-lg', 'w-32', 'h-32', 'flex-grow', 'md:w-40', 'md:h-40', 'transition', 'duration-300', 'hover:bg-slate-700/50', 'hover:scale-[1.05]');
+        });
+
+        // Add Inter font source (optional but good practice for full compatibility)
+        const link = document.createElement('link');
+        link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+
+        // Simple script to handle active navigation link
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = 'home';
+            // Determine which section is currently in the viewport
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100; // Offset adjusted for fixed navbar
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            // Update active state in the navbar
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-400');
+                if (link.href.includes(current)) {
+                    link.classList.add('text-blue-400');
+                }
+            });
+        });
+        
+        // Ensure the 'home' link is active on load
+        document.querySelector('a[href="#home"]').classList.add('text-blue-400');
+
+        // --- Project Modal Logic ---
+        const modal = document.getElementById('projectViewModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const modalDownloadLink = document.getElementById('modalDownloadLink');
+        const pdfViewerContainer = document.getElementById('pdfViewerContainer');
+        const pdfViewer = document.getElementById('pdfViewer');
+
+        function openProjectModal(title, path, type) {
+            // 1. Set Title and Download Link
+            modalTitle.textContent = title;
+            modalDownloadLink.href = path;
+
+            // 2. Reset visibility
+            pdfViewerContainer.classList.add('hidden');
+            modalContent.innerHTML = ''; // Clear previous content
+
+            let viewMessage = '';
+            
+            if (type === 'pdf') {
+                // PDF - Attempt to embed
+                viewMessage = `
+                    <p class="flex items-center gap-2 font-semibold text-lg text-yellow-400">
+                        <i class="ph-fill ph-warning-circle"></i> PDF Viewing Note:
+                    </p>
+                    <p>
+                        The PDF file is displayed below. If it fails to load, please use the 
+                        <strong>Download File</strong> button, as some browsers restrict file access from local or temporary servers.
+                    </p>
+                    <p class="text-sm text-slate-500">Source Path: ${path}</p>
+                `;
+                modalContent.innerHTML = viewMessage;
+                pdfViewer.src = path;
+                pdfViewerContainer.classList.remove('hidden');
+
+            } else if (type === 'code' || type === 'data') {
+                // SQL / Excel / Non-visual files - Provide instruction
+                viewMessage = `
+                    <p class="flex items-center gap-2 font-semibold text-lg text-yellow-400">
+                        <i class="ph-fill ph-warning-circle"></i> Viewing Note:
+                    </p>
+                    <p>
+                        This project is either a raw data file (SQL, XLSX) or a conceptual project. For a full review, please use the 
+                        <strong>Download File</strong> button to inspect the source code or document.
+                    </p>
+                    <p class="text-xl mt-4">
+                        <a href="https://github.com/your-live-demo-link" target="_blank" class="text-blue-400 hover:text-blue-300 underline">
+                            If this were a live web app, the demo would be here.
+                        </a>
+                    </p>
+                    <p class="text-sm text-slate-500">File Path: ${path}</p>
+                `;
+                modalContent.innerHTML = viewMessage;
+            }
+
+            // 3. Show Modal
+            modal.style.display = 'flex';
+        }
+
+        function closeProjectModal() {
+            // 1. Hide Modal
+            modal.style.display = 'none';
+            // 2. Stop PDF viewer to prevent resource drain
+            pdfViewer.src = ''; 
+        }
+
+        // Close modal on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeProjectModal();
+            }
+        });
+        
+    </script>
+</body>
+</html>
